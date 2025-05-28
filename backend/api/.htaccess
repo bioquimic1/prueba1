@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Si la solicitud no es para un archivo o directorio existente,
+    # redirigir a index.php (si se adopta un enrutador frontal completo)
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Opcional: Forzar HTTPS (descomentar si se tiene SSL)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Cabeceras de seguridad básicas
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+
+# Permitir CORS si el frontend está en un dominio/puerto diferente
+# Header set Access-Control-Allow-Origin "*"
+# Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+# Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+# Asegurar que los archivos PHP se interpreten
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>

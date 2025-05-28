@@ -15,7 +15,7 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="/dashboard_placeholder.html" class="cta-button">Access Dashboard</a></li>
+                <li><a href="#" class="cta-button" onclick="document.getElementById('loginModal').style.display='block'; return false;">Access Dashboard</a></li>
             </ul>
         </nav>
     </header>
@@ -73,6 +73,26 @@
     <footer>
         <p>&copy; 2023 WarehouseCo. All rights reserved.</p>
     </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
+            <h2>Acceso Dashboard</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="cta-button">Login</button>
+                <p id="loginError" class="error-message" style="display:none;"></p>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

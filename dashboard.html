@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Dashboard</title>
+    <link rel="stylesheet" href="dashboard_style.css"> <!-- Usaremos el mismo CSS por ahora, luego crearemos dashboard_style.css -->
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Dashboard Almacén</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#">Resumen</a></li>
+                    <li><a href="#">Inventario</a></li>
+                    <li><a href="#">Entradas</a></li>
+                    <li><a href="#">Salidas</a></li>
+                    <li><a href="#">Reportes</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="index.html">Volver a Landing</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Resumen General</h1>
+                <div class="user-info">
+                    <span>Usuario: Admin</span>
+                    <a href="#">Cerrar Sesión</a>
+                </div>
+            </header>
+
+            <section class="dashboard-widgets">
+                <div class="widget">
+                    <h3>Total Items en Inventario</h3>
+                    <p class="data-placeholder">---</p>
+                </div>
+                <div class="widget">
+                    <h3>Valor del Inventario</h3>
+                    <p class="data-placeholder">$---</p>
+                </div>
+                <div class="widget">
+                    <h3>Entradas Recientes</h3>
+                    <p class="data-placeholder">---</p>
+                </div>
+                <div class="widget">
+                    <h3>Salidas Recientes</h3>
+                    <p class="data-placeholder">---</p>
+                </div>
+            </section>
+
+            <section class="dashboard-tables">
+                <h2>Actividad Reciente</h2>
+                <div class="table-placeholder">
+                    <p>[Placeholder para tabla de actividad]</p>
+                </div>
+            </section>
+
+            <section class="dashboard-charts">
+                <h2>Estadísticas Visuales</h2>
+                <div class="chart-placeholder">
+                    <p>[Placeholder para gráfico]</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script> <!-- Usaremos el mismo JS por ahora -->
+</body>
+</html>
